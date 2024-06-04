@@ -1,0 +1,151 @@
+:root {
+    --black-color: #1e1e1e;
+    --white-color: #f9ffff;
+    --pink-color: #fdd6db;
+    --yellow-color: #fdf39e;
+    --background-blue: #dbeafd;
+    --skyblue-color: #b7d6fb;
+    --font-blue: #3f95ff;
+}
+
+@font-face {
+    font-family: 'UhBeeHYUNJUNG';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeHYUNJUNG.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--skyblue-color);
+    color: var(--black-color);
+    font-family: "NanumSquareNeo-Variable", sans-serif;
+}
+
+a {
+    color: var(--black-color);
+}
+
+/* ----------nav */
+#wrap>header {
+    display: flex;
+    background-color: var(--white-color);
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+#wrap>header>h1>a {
+    font-family: "UhBeeHYUNJUNG", cursive;
+    font-size: 2rem;
+    color: var(--font-blue);
+}
+
+#nav>ul {
+    display: flex;
+    font-size: 1.3rem;
+}
+
+#nav>ul>li {
+    position: relative;
+    margin: 20px 50px;
+}
+
+#nav>ul>li>a,
+#nav>ul>li>span {
+    color: var(--font-blue);
+    display: block;
+    padding: 20px;
+}
+#nav>ul>li>a:hover {
+    color: var(--skyblue-color);
+}
+.nav-list > span {
+    cursor: default;
+}
+/* ---------submenu */
+
+.nav-list>ul {
+    display: none;
+    width: 230px;
+    background-color: var(--white-color);
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    position: absolute;
+    transform: translateX(-25%);
+    z-index: 900;
+}
+
+@keyframes dropdown {
+    from{max-height: 0}
+    to{max-height: 300px}
+}
+
+#nav>ul>li>ul>li>a {
+    color: var(--font-blue);
+    display: block;
+    padding: 15px 0 15px 0;
+}
+
+#nav>ul>li>ul>li>a:hover {
+    color: var(--skyblue-color);
+}
+
+/* --------to top */
+
+#toTop{
+cursor: pointer;
+background-image: url("../images/manggomhomepage/totop.png");
+background-repeat: no-repeat;
+background-size: contain;
+width: 50px;
+height: 65px;
+position: fixed;
+top: 90%;
+right: 5%;
+z-index: 999;
+}
+
+/* ----------footer */
+#footer::before {
+    content: url(../images/manggomhomepage/footer_kick_scooter.png);
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: scale(0.6);
+}
+
+#footer {
+    height: 500px;
+    /* bottom background image */
+    background-image: url("../images/manggomhomepage/footer_background02.png");
+    background-repeat: repeat-x;
+    background-size: 900px;
+    background-position: center bottom;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 40px;
+}
+
+#footer>div:first-of-type>a>img {
+    width: 40px;
+    margin: 20px 5px;
+}
+
+#footer>div:nth-of-type(2)>a,
+#footer>div:last-of-type>a {
+    display: inline-block;
+    margin: 20px 5px;
+    font-size: 1.1rem;
+}
+
