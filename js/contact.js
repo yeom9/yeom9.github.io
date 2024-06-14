@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function(){
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "images/send.json"
+        path: "images/json/send.json"
     });
 
 });
