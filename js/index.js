@@ -1,4 +1,5 @@
 "use strict";
+
 document.addEventListener("DOMContentLoaded",function(){
 
     let lottieThoughtful = lottie.loadAnimation({
@@ -6,21 +7,21 @@ document.addEventListener("DOMContentLoaded",function(){
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "images/thoughtful.json"
+        path: "images/json/thoughtful.json"
     });
     let lottieIntelligent = lottie.loadAnimation({
         container: document.getElementById("lottieIntelligent"),
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "images/Intelligent.json"
+        path: "images/json/intelligent.json"
     });
     let lottieCompassionate = lottie.loadAnimation({
         container: document.getElementById("lottieCompassionate"),
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "images/Compassionate.json"
+        path: "images/json/compassionate.json"
     });
 
 });
