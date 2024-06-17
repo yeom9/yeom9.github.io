@@ -54,7 +54,7 @@
 .work-info{
     width: 60%;
     padding: 5rem;
-    font-family: "NanumSquareNeo-Variable",sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
 }
 .work-info>li:first-of-type{

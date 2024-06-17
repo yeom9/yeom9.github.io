@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",function(){
             renderer: "svg",
             loop: false,
             autoplay: true,
-            path: "images/json/click.json"
+            path: "../images/json/click.json"
             
         });
         

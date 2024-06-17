@@ -1,7 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded",function(){
 
-    let lottieIntelligent = lottie.loadAnimation({
+    let lottieContact = lottie.loadAnimation({
         container: document.getElementById("lottieSend"),
         renderer: "svg",
         loop: true,
