@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 애니메이션</title>
+    <style>
+        .clickLottie {
+            position: absolute;
+            width: 40px; /* 적절한 크기로 조정 */
+            height: 40px; /* 적절한 크기로 조정 */
+            pointer-events: none; /* 클릭 이벤트가 애니메이션 요소에 전달되지 않도록 함 */
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="myButton">Click Me</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+    <script>
+        document.getElementById('myButton').addEventListener('click', function(e) {
+            e.preventDefault(); // 기본 링크 동작을 방지합니다.
+            
+            const button = e.currentTarget;
+            
+            let animationElement = document.createElement('div');
+            animationElement.classList.add('clickLottie');
+
+            // 클릭 위치를 설정
+            animationElement.style.left = `${e.offsetX - 20}px`;
+            animationElement.style.top = `${e.offsetY - 20}px`;
+            animationElement.style.pointerEvents = 'none'; // 클릭 이벤트가 애니메이션 요소에 전달되지 않도록 함
+
+            button.appendChild(animationElement);
+
+            // lottie 애니메이션 로드
+            let clickLottie = lottie.loadAnimation({
+                container: animationElement,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '../images/click.json'
+            });
+
+            // 애니메이션이 끝난 후 요소 제거
+            clickLottie.addEventListener('complete', function() {
+                animationElement.remove();
+                window.location.href = link.href;
+            });
+        });
+    </script>
+</body>
+</html>

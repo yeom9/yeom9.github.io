@@ -55,7 +55,6 @@
     width: 60%;
     padding: 5rem;
     font-family: "Noto Sans KR", sans-serif;
-    font-weight: 300;
 }
 .work-info>li:first-of-type{
     line-height: 1.5rem;
@@ -69,7 +68,7 @@
     width: 100px;
 }
 .work-info ul>li>span:last-of-type{
-    font-weight: bolder;
+    font-weight: 600;
 }
 .site-image img{
     object-fit: cover;

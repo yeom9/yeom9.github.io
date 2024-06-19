@@ -6,6 +6,9 @@
     align-items: center;
     font-weight: 400;
 }
+#contact>h2{
+    margin-top: 3rem;
+}
 #contact>h2>span{
     font-size: 5rem;
     font-weight: 300;
@@ -23,7 +26,4 @@
 }
 #lottieSend{
     min-width: 50%;
-}
-#footer>p{
-    line-height: 2rem;
 }

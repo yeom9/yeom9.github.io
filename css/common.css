@@ -21,6 +21,7 @@ body{
     font-family: "jost", sans-serif;
     color: var(--black);
 }
+
 /* mouse click animation */
 .clickLottie {
     position: absolute;
@@ -42,7 +43,7 @@ body{
 #logo{
     display: flex;
     justify-content: space-between;
-    padding: 3rem 3rem 1rem 3rem;
+    margin: 3rem 3rem 1rem 3rem;
 }
 #logo>span{
     border-bottom: 1px solid var(--black);
@@ -79,7 +80,8 @@ body{
 }
 
 /* footer */
-#footer{
+#footer>p{
     text-align: center;
-    margin: 20px;
+    line-height: 2rem;
+    margin: 1rem;
 }

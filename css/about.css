@@ -1,0 +1,81 @@
+#lottiePath{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    z-index: -10;
+}
+#about{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem;
+}
+
+/* intro */
+#aboutLeft{
+    width: 30%;
+}
+#aboutLeft>h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+#aboutLeft img{
+    width: 100%;
+}
+#aboutLeft p{
+    font-family: "noto sans kr",sans-serif;
+    margin: 1rem 0;
+    line-height: 1.7rem;
+}
+
+/* exp & edu */
+#aboutRight{
+    width: 60%;
+}
+#aboutRight>div{
+    margin: 4rem;
+}
+#aboutRight>div:not(:last-child) span:first-of-type{
+    border: 1px solid var(--accent-green);
+    border-radius: 3rem;
+    padding: 0 1rem;
+}
+#aboutRight h2{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+#aboutRight li{
+    line-height: 3rem;
+}
+.exp-edu>ul>li>span:first-of-type{
+    display: inline-block;
+    line-height: 1rem;
+    margin-right: 2rem;
+}
+
+/* skills */
+#skillBox{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 10px; */
+}
+#skillBox>ul>li>span:first-of-type{
+    display: inline-block;
+    width: 80px;
+}
+.skill-bar{
+    display: inline-block;
+    width: 150px;
+    height: 15px;
+    background-color: var(--light-green);
+}
+.skill-fill{
+    display: inline-block;
+    height: 15px;
+    background-color: var(--accent-green);
+    vertical-align:top;
+}
+#skillBox span{
+    line-height: 15px;
+}
+
