@@ -12,9 +12,6 @@
 #aboutLeft>h2{
     font-size: 3rem;
     margin-bottom: 1rem;
-    opacity: 0;
-
-    animation: slideUp 1s ease forwards, fadeIn 1s ease forwards;
 }
 #aboutLeft img{
     width: 100%;
@@ -26,7 +23,6 @@
     margin: 1rem 0;
     line-height: 1.7rem;
     opacity: 0;
-    animation: slideUp 1s ease forwards, fadeIn 1s ease forwards;
 }
 
 /* exp & edu */
@@ -48,10 +44,6 @@
 #aboutRight li{
     line-height: 3rem;
 }
-.exp-edu{
-    opacity: 0;
-    animation: slideUp 1s ease forwards, fadeIn 1s ease forwards;
-}
 .exp-edu>ul>li>span:first-of-type{
     display: inline-block;
     line-height: 1rem;
@@ -61,7 +53,6 @@
 /* skills */
 #aboutRight>div:last-of-type{
     opacity: 0;
-    animation: fadeIn 1s ease forwards;
 }
 #skillBox{
     display: flex;
@@ -82,8 +73,9 @@
     height: 15px;
     background-color: var(--accent-green);
     vertical-align:top;
+    opacity: 0;
 
-    animation: fadeIn 2s ease forwards, skillBar 3s ease forwards;
+    /* animation: fadeIn 2s ease forwards, skillBar 3s ease forwards; */
 }
 .bar1{--target-width:80%}
 .bar2{--target-width:70%}
@@ -98,6 +90,11 @@
 
 #skillBox span{
     line-height: 15px;
+}
+
+/* javascript */
+.observer-slideUp{
+    opacity:0
 }
 
 @media (max-width: 767px) {
