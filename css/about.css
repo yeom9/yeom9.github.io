@@ -19,7 +19,7 @@
 #aboutLeft img{
     width: 100%;
     opacity: 0;
-    animation: fadeIn 2s ease forwards;
+    animation: fadeIn 1s ease forwards;
 }
 #aboutLeft p{
     font-family: "noto sans kr",sans-serif;
@@ -100,3 +100,26 @@
     line-height: 15px;
 }
 
+@media (max-width: 767px) {
+    /* mobile */
+    #about{
+        display: flex;
+        flex-direction: column;
+    }
+    #aboutLeft{
+        width: 100%;
+    }
+    #aboutRight{
+        width: 100%;
+    }
+    #aboutRight>div{
+        margin: 4rem 0;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* tablet */
+    #aboutRight>div{
+        margin: 4rem 0;
+    }
+}
