@@ -101,8 +101,6 @@
     box-sizing: border-box;
 }
 
-
-
 #btnLeft,
 #btnRight {
     display: none;
@@ -124,7 +122,8 @@
 
 @media (max-width:767px) {
     #scrollContainer {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         margin-top: 2rem;
     }
 
