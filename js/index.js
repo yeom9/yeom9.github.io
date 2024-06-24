@@ -1,5 +1,4 @@
 "use strict";
-
 document.addEventListener("DOMContentLoaded",function(){
 
     let lottieThoughtful = lottie.loadAnimation({
