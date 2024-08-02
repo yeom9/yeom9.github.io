@@ -17,13 +17,14 @@
 
 #aboutLeft img {
     width: 100%;
+    border-radius: 10px;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
 #aboutLeft p {
     font-family: "noto sans kr", sans-serif;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     line-height: 1.7rem;
     opacity: 0;
 }
@@ -38,8 +39,6 @@
 }
 
 #aboutRight>div:not(:last-child) span:first-of-type {
-    border: 1px solid var(--accent-green);
-    border-radius: 3rem;
     padding: 0 1rem;
 }
 
