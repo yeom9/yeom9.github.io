@@ -37,24 +37,24 @@ a {
     display: flex;
     background-color: var(--white-color);
     justify-content: center;
-    gap: 50px;
+    gap:50px;
     align-items: center;
 }
 
 #wrap>header>h1>a {
     font-family: "UhBeeHYUNJUNG", cursive;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--font-blue);
 }
 
 #nav>ul {
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 #nav>ul>li {
     position: relative;
-    margin: 20px 50px;
+    margin: 20px 0;
 }
 
 #nav>ul>li>a,

@@ -3,7 +3,8 @@
     --black: #303030;
     --light-gray: #a2a2a2;
     --white: #f4f4f4;
-    --background: #e9ede5;
+    /* --background: #e9ede5; */
+    --background: #f4f4f4;
     --light-green: #84c394;
     --accent-green: #166029;
 }

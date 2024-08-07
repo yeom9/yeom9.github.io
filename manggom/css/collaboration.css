@@ -58,17 +58,15 @@
 
 /* collaboration banner */
 #collaboWrap {
-    width: 1400px;
+    width: 900px;
     margin: 50px auto;
-    /* background-color:var(--white-color); */
-    /* border: 2px solid black; */
 }
 
 #collaboWrap>a {
     display: block;
-    margin-bottom: 50px;
-    width: 1400px;
-    height: 350px;
+    margin-bottom: 20px;
+    width: 900px;
+    height: 250px;
     position: relative;
 
     opacity: 0;
