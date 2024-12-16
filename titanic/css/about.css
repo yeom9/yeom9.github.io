@@ -1,0 +1,357 @@
+/* :root{
+    --blue-color:#00007c;
+    --gold-color:#ccae81;
+    --white-color: #fdfdfd;
+    --black-color: #181818;
+    --gray-color: #d7d7d7; */
+
+/* font size */
+/* --font-title-large: 4rem;
+    --font-title-regular: 2rem;
+} */
+
+#nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#movieTitanic {
+    background-image: url("../images/about_background_arm.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 200px 0 100px;
+
+    color: var(--white-color);
+    font-weight: 200;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 100px;
+}
+
+/* about movie titanic title */
+#movieTitanic>h2 {
+    font-size: var(--font-title-regular);
+    text-align: left;
+    border-left: 1px solid var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+    animation: expand 1.5s forwards;
+}
+
+@keyframes expand {
+    from {
+        margin-top: 300px;
+        margin-bottom: 300px;
+    }
+
+    to {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+#movieTitanic>h2>span {
+    font-weight: 600;
+    font-size: larger;
+
+    animation: slideUp 1.5s linear forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(80%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* titanic description  */
+#movieInfo>ul {
+    line-height: 2rem;
+    letter-spacing: 1px;
+
+}
+
+#movieInfo>ul:nth-of-type(2) {
+    border-top: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--white-color);
+}
+
+#movieInfo>ul>li {
+    display: flex;
+    text-align: left;
+    animation: movieDescription 1.5s forwards;
+}
+
+@keyframes movieDescription {
+    from {
+        gap: 300px;
+        opacity: 0;
+    }
+
+    to {
+        gap: 10px;
+        opacity: 1;
+    }
+}
+
+#movieInfo>ul>li>span:first-of-type {
+    margin-right: 20px;
+    font-weight: 600;
+    width: 140px;
+}
+
+/* ship titanic title */
+#shipInfo {
+    background-color: var(--gray-color);
+    background-image: url("../images/RMS_Titanic_3.jpg");
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 100px 100px;
+    font-weight: 300;
+}
+
+#shipInfo>div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 50px;
+    margin-right: 50px;
+}
+
+#shipInfo>h2 {
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--font-title-regular);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--black-color);
+
+    transition: all 1.5s;
+}
+
+#shipInfo>h2>span {
+    font-weight: 600;
+    font-size: larger;
+}
+
+/* ship titanic description */
+#shipInfo>div>ul>li>span:first-of-type {
+    display: inline-block;
+    width: 300px;
+}
+
+#shipInfo>div>ul {
+    line-height: 2rem;
+    border-left: 1px solid var(--black-color);
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    opacity: 0;
+    transition: all 2s;
+}
+
+.ship-contents>li>span:first-of-type {
+    margin-right: 20px;
+    font-weight: 600;
+    width: 140px;
+}
+
+.ship-contents>span {
+    display: block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* inside of the titanic */
+#inside {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    background: linear-gradient(180deg, rgba(154, 152, 152, 1) 0%, rgba(220, 219, 219, 1) 8%, rgba(253, 253, 253, 1) 17%, rgba(255, 255, 255, 1) 87%, rgba(209, 209, 209, 1) 95%, rgba(169, 169, 169, 1) 100%);
+}
+
+#inside>h2 {
+    font-size: var(--font-title-regular);
+    font-weight: 600;
+    margin: 100px;
+    padding-left: 20px;
+    border-left: 1px solid var(--black-color);
+}
+
+#wrap {
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 100px;
+}
+
+#wrap>div {
+    display: inline-block;
+    text-align: center;
+}
+
+#wrap>div>span {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.button {
+    width: 100px;
+    height: 150px;
+    border: none;
+}
+
+.button:first-of-type {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 0 20px 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    background-image: url(../images/icons/angle-left-solid-white.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center center;
+    opacity: 0.8;
+}
+
+.button:last-of-type {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    background-image: url(../images/icons/angle-right-solid-white.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center center;
+    opacity: 0.8;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+#wrap>div>img {
+    margin: 0 30px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+/* width 768px ~ 1024px */
+@media screen and (min-width:768px) and (max-width:1024px) {
+    html {
+        font-size: 13px;
+    }
+
+    #movieTitanic {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    #shipInfo {
+        padding: 100px 50px;
+    }
+
+    #shipInfo>div {
+        margin-right: 0px;
+    }
+
+    #shipInfo>div>ul>li>span:first-of-type {
+        display: inline-block;
+        width: 150px;
+    }
+
+    #wrap>div>img {
+        height: 300px;
+    }
+
+    .button {
+        width: 70px;
+        height: 100px;
+    }
+
+    .button:first-of-type {
+        background-size: 20px;
+    }
+
+    .button:last-of-type {
+        background-size: 20px;
+    }
+}
+
+/* width ~ 767px */
+@media screen and (max-width:767px) {
+    html {
+        font-size: 13px;
+    }
+
+    #movieTitanic {
+        padding: 200px 30px 100px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    #shipInfo {
+        background-position: 80% 3%;
+        padding: 100px 30px;
+    }
+
+    #shipInfo>div {
+        align-items: normal;
+        margin-right: 0px;
+    }
+
+    #shipInfo>div>ul>li>span:first-of-type {
+        display: inline-block;
+        width: 100px;
+    }
+
+    #wrap>div>img {
+        height: 50vw;
+    }
+
+
+    /* ---------------------- */
+    #wrap>div{
+        width: 100vw;
+    }
+    .button {
+        width: 50px;
+        height: 100px;
+    }
+
+    .button:first-of-type {
+        background-size: 20px;
+    }
+
+    .button:last-of-type {
+        background-size: 20px;
+    }
+
+}

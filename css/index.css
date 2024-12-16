@@ -1,0 +1,57 @@
+/* section title */
+#mainTitle {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainTitle span {
+    display: block;
+    text-align: center;
+    font-family: "sedgwick ave", cursive;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin: 2rem;
+}
+
+#mainTitle span:first-of-type {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards, fadeIn 1s ease forwards;
+}
+
+#mainTitle span:nth-of-type(2) {
+    opacity: 0;
+    animation: slideInFromLeft 1s 0.5s ease forwards, fadeIn 0.5s 0.5s ease forwards;
+}
+
+#mainTitle span:last-of-type {
+    opacity: 0;
+    animation: slideInFromLeft 1s 1s ease forwards, fadeIn 0.5s 1s ease forwards;
+}
+
+/* main lottie */
+#lottieContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+
+    animation: slideUp 1s ease forwards, fadeIn 1s ease forwards;
+}
+
+.indexLottie {
+    width: 15vw;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+
+    /* mobile */
+    #mainTitle span {
+        font-size: 2.5rem;
+    }
+
+    .indexLottie {
+        width: 20vw;
+        height: 100%;
+    }
+}

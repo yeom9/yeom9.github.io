@@ -1,0 +1,257 @@
+:root {
+    --black-color: #1e1e1e;
+    --white-color: #f9ffff;
+    --pink-color: #fdd6db;
+    --yellow-color: #fdf39e;
+    --background-blue: #dbeafd;
+    --skyblue-color: #b7d6fb;
+    --font-blue: #3f95ff;
+}
+
+@font-face {
+    font-family: 'UhBeeHYUNJUNG';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeHYUNJUNG.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#character {
+    border: 20px solid var(--white-color);
+    border-radius: 10px;
+    margin: 100px auto;
+    width: 1300px;
+    height: 700px;
+    position: relative;
+}
+
+#character::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.3s forwards;
+    background-image:
+        url("../images/character/grass.png"),
+        url("../images/character/land3.png"),
+        url("../images/character/land1.png"),
+        url("../images/character/land2.png"),
+        url("../images/character/mountain.png");
+}
+
+#character::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.9s forwards;
+    background-image:
+        url("../images/character/cloud.png");
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(3%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#character>div {
+    margin: 100px auto;
+    width: 500px;
+    height: 400px;
+    font-family: "poor story", cursive;
+    font-weight: bold;
+    text-align: center;
+    animation: text 2s;
+}
+
+@keyframes text {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#character>div>span {
+    display: block;
+}
+
+#character>div>span:first-of-type {
+    font-size: 1.5rem;
+    margin: 20px auto;
+}
+
+#character>div>span:last-of-type {
+    font-size: 1.7rem;
+}
+
+#character>div>p {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+/* character hamter */
+#character>img:first-of-type {
+    transform: translateX(100%);
+    position: absolute;
+    top: 73%;
+    left: 45%;
+    z-index: 100;
+    transform: scale(0.7);
+    animation: hamterAppear 0.8s;
+}
+
+@keyframes hamterAppear {
+    from {
+        opacity: 0;
+        top: 70%;
+    }
+
+    to {
+        opacity: 1;
+        top: 73%;
+    }
+}
+
+/* character manggom */
+#character>img:last-of-type {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 100;
+    transform: scale(0.7);
+    animation: manggomAppear 0.8s;
+}
+
+@keyframes manggomAppear {
+    from {
+        opacity: 0;
+        top: 45%
+    }
+
+    to {
+        opacity: 1;
+        top: 40%;
+    }
+}
+
+/* ------manggom */
+#manggom {
+    background-image: url("../images/deco/character_background_trans.png");
+    background-color: var(--yellow-color);
+    margin: 0 auto;
+    width: 1300px;
+    height: 3300px;
+    font-family: "poor story", cursive;
+    padding-top: 80px;
+    border-radius: 50px;
+    box-shadow: 1px 3px 3px 0 var(--font-blue);
+}
+/* #manggom > img::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1300px;
+    height: 400px;
+    background-image:url("../images/deco/tile.png");
+    z-index:80 ;
+} */
+#manggom>h2 {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    margin: 100px;
+}
+
+#manggom>div {
+    /* border: 1px solid #1e1e1e; */
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin-bottom: 400px;
+}
+
+#manggom>div>div {
+    margin-left: 100px;
+    /* border: 1px solid red; */
+}
+
+/* font setting */
+#manggom>div>div>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px;
+    line-height: 2.2rem;
+}
+
+/* manggom & hamter */
+#manggom>div:last-of-type>div:last-of-type>p {
+    line-height: 3rem;
+}
+
+#manggom>div:last-of-type>div:last-of-type>img {
+    margin: 50px 0;
+}
+
+.right-box {
+    position: absolute;
+    top: 80%;
+    right: 100px;
+}
+
+#manggom>div:last-of-type {
+    margin-top: 650px;
+    display: block;
+}
+
+#manggom>div:last-of-type>img {
+    margin-bottom: 50px;
+    width: 100px;
+    height: auto;
+}
+
+#manggom>div:last-of-type>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+}
+
+.main-introduction:first-of-type {
+    width: 75px;
+}
+
+.main-introduction:last-of-type {
+    width: 200px;
+}
+
+.content-appear {
+    opacity: 0;
+    transition: all 0.8s;
+}
+.content-appear:nth-of-type(odd):not(:last-of-type){
+    transform: translateX(-50%);
+}
+.content-appear:nth-of-type(even){
+    transform: translateX(50%);
+}
+.content-appear.last-content {
+    transform: translateY(30%);
+}
