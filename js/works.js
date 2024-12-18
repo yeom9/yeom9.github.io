@@ -122,10 +122,24 @@ document.addEventListener("DOMContentLoaded",function(){
                         padding: 0; /* 패딩 제거 */
                         border: none; /* 경계선 제거 */
                     }
+                    button {
+                        padding: 10px 20px;
+                        margin-top: 20px;
+                        font-size: 16px;
+                        background-color: #333;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                    }
+                    button:hover {
+                        background-color: #555;
+                    }
                 </style>
             </head>
             <body>
                 ${images.map(src => `<img src="${src}" alt="Image">`).join('')}
+                <button onclick="window.close()">창 닫기</button>
             </body>
             </html>
             `);
@@ -134,6 +148,67 @@ document.addEventListener("DOMContentLoaded",function(){
             popupWindow.document.close();
         });
   
+        // 이미지 데이터를 준비
+        const banners = [
+            'images/image/네이버스마트스토어-자유배너PC(2).jpg',
+            'images/image/자유배너mobile.jpg'
+        ];
+
+        // 버튼 클릭 시 새 창 열기
+        document.getElementById('open-banner').addEventListener('click', () => {
+            // 새 창 생성
+            const popupWindow = window.open('', '_blank', 'width=800,height=1000,scrollbars=yes');
+
+            // 새 창에 HTML 구조 추가
+            popupWindow.document.write(`
+            <!DOCTYPE html>
+            <html lang="ko">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>이미지 뷰어</title>
+                <style>
+                body {
+                    margin: 50px; /* 페이지 기본 여백 */
+                    padding: 0;
+                    background-color: #fff;
+                }
+                
+                img {
+                    display: block; /* 이미지 간 간격 제거 */
+                    width: auto; /* 창 너비에 맞춤 */
+                    max-width: 100%; /* 최대 너비는 원본 크기로 제한 */
+                    height: auto; /* 비율 유지 */
+                    margin: 0 0 20px 0; /* 이미지 사이 간격 추가 (하단 여백) */
+                    padding: 0; /* 패딩 제거 */
+                    border: none; /* 경계선 제거 */
+                }
+                button {
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    font-size: 16px;
+                    background-color: #333;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                button:hover {
+                    background-color: #555;
+                }
+                </style>
+            </head>
+            <body>
+                ${banners.map(src => `<img src="${src}" alt="이미지">`).join('')}
+                <button onclick="window.close()">창 닫기</button>
+            </body>
+            </html>
+            `);
+
+            // 새 창 닫기 가능하게 설정
+            popupWindow.document.close();
+        });
+
 
 });
 
